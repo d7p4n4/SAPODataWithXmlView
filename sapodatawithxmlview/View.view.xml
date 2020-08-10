@@ -1,0 +1,86 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="sapodatawithxmlview.View" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Shell>
+		<App>
+			<pages>
+				
+				<Page id="page" title="{i18n>title}">
+				<content>
+				    <Table noDataText="Drop column list items here and columns in the area above" id="table0" items="{/ac4ypersistentchildodata}">
+				        <items>
+				            <ColumnListItem type="Active" id="item0">
+				                <cells>
+				                    <Text id="text0" text="{id}" type=""/>
+				                    <Text id="text1" text="{name}"/>
+				                    <Text xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" id="text1_copy5" text="{createdAt}"/>
+									<!--
+				                    <Text xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" text="{Title}" id="text1_copy4"/>
+				                    <Text xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" id="text1_copy3" text="{Address}"/>
+				                    <Text xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" id="text1_copy2" text="{City}"/>
+				                    <Text xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" id="text1_copy" text="{Country}"/>
+				                    <Text id="text2" text="{HomePhone}"/>
+									-->
+									</cells>
+				            </ColumnListItem>
+				        </items>
+				        <columns>
+				            <Column id="column0">
+				                <header>
+				                    <Label text="ID" id="label0"/>
+				                </header>
+				            </Column>
+				            <Column xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" id="column0_copy">
+				                <header>
+				                    <Label text="Name" id="label0_copy"/>
+				                    
+				                </header>
+				                
+				            </Column>
+				            <Column xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" id="column0_copy2">
+				                <header>
+				                    <Label text="Registration Date" id="label0_copy2"/>
+				                    
+				                </header>
+				                
+				            </Column>
+							<!--
+				            <Column xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" id="column0_copy4">
+				                <header>
+				                    <Label text="Title" id="Title"/>
+				                    
+				                </header>
+				                
+				            </Column>
+				            <Column xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" id="column0_copy5">
+				                <header>
+				                    <Label text="Address" id="label0_copy5"/>
+				                    
+				                </header>
+				                
+				            </Column>
+				            <Column xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" id="column0_copy3">
+				                <header>
+				                    <Label text="City" id="label0_copy3"/>
+				                    
+				                </header>
+				                
+				            </Column>
+				            <Column id="column1">
+				                <header>
+				                    <Label text="Country" id="label1"/>
+				                </header>
+				            </Column>
+				            <Column id="column2">
+				                <header>
+				                    <Label text="Phone" id="label2"/>
+				                </header>
+				            </Column>
+							-->
+							</columns></Table>
+				</content>
+				</Page>
+
+			</pages>
+		</App>
+	</Shell>
+</core:View>
