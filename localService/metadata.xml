@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:DataServices>
+        <Schema Namespace="CSAc4yObjectPlanCORE" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityType Name="Ac4yPersistentChild">
+                <Key>
+                    <PropertyRef Name="id" />
+                </Key>
+                <Property Name="name" Type="Edm.String" />
+                <Property Name="ages" Type="Edm.Int32" Nullable="false" />
+                <Property Name="id" Type="Edm.Int32" Nullable="false" />
+                <Property Name="guid" Type="Edm.String" />
+                <Property Name="owner" Type="Edm.String" />
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Nullable="false" />
+                <Property Name="updatedAt" Type="Edm.DateTimeOffset" Nullable="false" />
+            </EntityType>
+        </Schema>
+        <Schema Namespace="Default" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="Container">
+                <EntitySet Name="Ac4yPersistentChildOData" EntityType="CSAc4yObjectPlanCORE.Ac4yPersistentChild" />
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

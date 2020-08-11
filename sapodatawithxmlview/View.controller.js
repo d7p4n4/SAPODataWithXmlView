@@ -5,18 +5,21 @@ sap.ui.controller("sapodatawithxmlview.View", {
 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 * @memberOf sapodatawithxmlview.View
 */
-onAfterRendering: function() {
+onInit: function() {
     /*$.ajax({
         url: "https://localhost:44315/odata/ac4ypersistentchildodata"
     }).done(function(data, status, jqxhr) {*/
         var oModel = new sap.ui.model.odata.v4.ODataModel({
 			groupId: "$direct",
 			synchronizationMode: "None",
-			serviceUrl: "https://localhost:44315/odata/"
+            serviceUrl: "https://localhost:44315/odata/",
+            updateGroupId: "EDMTypes"
 		});
+			oModel.setDefaultBindingMode("OneWay");
         //oModel.setData({modelData: data});
         var oTable = this.byId("table0");
         oTable.setModel(oModel);
+
     //});
 },
 /**
